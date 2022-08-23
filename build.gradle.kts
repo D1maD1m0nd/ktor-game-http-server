@@ -1,6 +1,7 @@
 val ktor_version: String by project
 val kotlin_version: String by project
 val logback_version: String by project
+val kmongo_version: String by project
 
 plugins {
     application
@@ -23,6 +24,8 @@ repositories {
 }
 
 dependencies {
+    // Inside the dependencies
+    implementation("org.litote.kmongo:kmongo:$kmongo_version")
     implementation("io.ktor:ktor-server-core-jvm:$ktor_version")
     implementation("io.ktor:ktor-server-content-negotiation-jvm:$ktor_version")
     implementation("io.ktor:ktor-serialization-kotlinx-json-jvm:$ktor_version")
