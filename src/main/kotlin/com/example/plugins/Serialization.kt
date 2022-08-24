@@ -1,5 +1,6 @@
 package com.example.plugins
 
+import com.example.route.userRouting
 import io.ktor.serialization.kotlinx.json.*
 import io.ktor.server.plugins.contentnegotiation.*
 import io.ktor.server.application.*
@@ -12,5 +13,6 @@ fun Application.configureSerialization() {
         json()
     }
     routing {
+        userRouting()
     }
 }
